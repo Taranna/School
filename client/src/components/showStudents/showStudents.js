@@ -11,9 +11,16 @@ import axios from "axios";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 
+import { cyan, red, purple, white } from "material-ui/colors";
+
 const useStyles = makeStyles({
+  h2: {
+    color: "purple",
+    // backgroundColor:"cyan" ,
+  },
   table: {
     minWidth: 650,
+    backgroundColor: "pink",
   },
 });
 
@@ -33,7 +40,7 @@ export default function ShowStudent() {
 
   return (
     <>
-      <h2>All Students</h2>
+      <h2 className={classes.h2}> Students Details</h2>
       <TableContainer component={Paper}>
         <Table
           className={classes.table}
@@ -43,7 +50,7 @@ export default function ShowStudent() {
           <TableHead>
             <TableRow>
               <TableCell>Name</TableCell>
-              <TableCell align="right">Registeration Number</TableCell>
+              <TableCell align="right">Registration Number</TableCell>
               <TableCell align="right">Standard</TableCell>
               <TableCell align="right">Class Section</TableCell>
               <TableCell align="right">Action</TableCell>

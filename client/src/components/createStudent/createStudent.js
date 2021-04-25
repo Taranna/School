@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { hslToRgb, makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
+import { cyan, red, purple, white } from "material-ui/colors";
 
 const useStyles = makeStyles((theme) => ({
+  h2: {
+    color: "purple",
+    backgroundColor: "pink",
+  },
+
   root: {
     "& > *": {
       margin: theme.spacing(1),
@@ -28,7 +34,7 @@ export default function CreateStudent() {
   };
   return (
     <>
-      <h2> Create Student</h2>
+      <h2 className={classes.h2}> Insert Student Details</h2>
       <form className={classes.root} noValidate autoComplete="off">
         <TextField
           id="outlined-basic"

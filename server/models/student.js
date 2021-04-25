@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const studentSchema = mongoose.Schema({
   RegisterNumber: {
-    type: String,
+    type: Number,
     required: true,
   },
   studname: {
@@ -9,13 +9,14 @@ const studentSchema = mongoose.Schema({
     required: true,
   },
   std: {
-    type: String,
+    type: Number,
     required: true,
   },
   sec: {
     type: String,
-    default: "A",
+    required: true,
   },
 });
 const StudentInformation = mongoose.model("student", studentSchema);
+/*studentt is mongodb studentts ..adds s ..and its collection name */
 export default StudentInformation;
