@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { hslToRgb, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import axios from "axios";
-import { cyan, red, purple, white } from "material-ui/colors";
+// import { cyan, red, purple, white } from "material-ui/colors";
 
 const useStyles = makeStyles((theme) => ({
   h2: {
@@ -28,9 +28,11 @@ export default function CreateStudent() {
     sec: "",
   });
   const createStudent = () => {
-    axios.post("http://localhost:5001/students", student).then(() => {
-      window.location.reload(false);
-    });
+    axios
+      .post("https://school-app-tara.herokuapp.com/students", student)
+      .then(() => {
+        window.location.reload(false);
+      });
   };
   return (
     <>

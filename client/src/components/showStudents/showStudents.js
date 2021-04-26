@@ -11,7 +11,7 @@ import axios from "axios";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-import { cyan, red, purple, white } from "material-ui/colors";
+// import { cyan, red, purple, white } from "material-ui/colors";
 
 const useStyles = makeStyles({
   h2: {
@@ -28,14 +28,18 @@ export default function ShowStudent() {
   const classes = useStyles();
   const [studentsList, setStudentList] = useState([]);
   const deleteStudent = (id) => {
-    axios.delete(`http://localhost:5001/students/${id}`).then(() => {
-      window.location.reload(false);
-    });
+    axios
+      .delete(`https://school-app-tara.herokuapp.com/students/${id}`)
+      .then(() => {
+        window.location.reload(false);
+      });
   };
   useEffect(() => {
-    axios.get("http://localhost:5001/students").then((allStudents) => {
-      setStudentList(allStudents.data);
-    });
+    axios
+      .get("https://school-app-tara.herokuapp.com/students")
+      .then((allStudents) => {
+        setStudentList(allStudents.data);
+      });
   }, []);
 
   return (

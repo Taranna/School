@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { cyan, red, purple, white } from "material-ui/colors";
+// import { cyan, red, purple, white } from "material-ui/colors";
 import Image from "./videos/Radiant-Gradient.svg";
 
 export default makeStyles(() => ({
