@@ -1,1 +1,1 @@
-# [LIVE SITE ](https://school-site-tara.netlify.app/)
+# [School Site](https://school-site-tara.netlify.app/)
